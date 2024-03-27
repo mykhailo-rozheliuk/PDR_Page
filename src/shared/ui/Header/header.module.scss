@@ -1,5 +1,7 @@
+@import '/src/styles/_index';
+
 .header {
-  background: #000;
+  background: $bg-color;
 
   &__container {
     max-width: 1640px !important;
@@ -9,5 +11,9 @@
     justify-content: space-between;
 
     padding: 20px !important;
+  }
+
+  &__title {
+    @include home_title;
   }
 }

@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   return (
     <div className={styles.footer}>
       <Container className={styles.footer__container}>
-        <div className={cn(styles.footer__title, styles.home_title)}>
+        <div className={styles.footer__title}>
           Super <span>PDR</span>
         </div>
 

@@ -1,0 +1,14 @@
+@import '../variables';
+
+@mixin home_title {
+  font-size: 32px;
+  color: $white-color;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+
+  span {
+    color: $main-color;
+    font-style: normal;
+    font-size: 135%;
+  }
+}

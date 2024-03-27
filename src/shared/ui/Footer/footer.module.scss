@@ -1,5 +1,7 @@
+@import '/src/styles/index';
+
 .footer {
-  background: #000;
+  background: $bg-color;
 
   &__container {
     max-width: 1640px !important;
@@ -12,8 +14,12 @@
   }
 
   &__text {
-    color: #ffff;
+    color: $white-color;
     font-weight: 500;
     font-size: 1.2rem;
+  }
+
+  &__title {
+    @include home_title;
   }
 }
