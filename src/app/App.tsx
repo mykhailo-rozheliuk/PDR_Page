@@ -1,7 +1,5 @@
-import './App.scss';
-
-function App() {
+export const App = () => {
   return <>hello</>;
-}
+};
 
 export default App;
