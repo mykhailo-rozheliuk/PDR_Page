@@ -1,0 +1,17 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  max-width: 100% !important;
+  min-height: 100vh;
+
+  &__page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

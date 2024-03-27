@@ -1,6 +1,8 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-// import { ... } from 'pages';
+import { Home } from 'pages';
+
+import { Layout } from 'shared/ui';
 
 export const withRouter =
   <T extends React.PropsWithChildren>(Cmp: React.ComponentType<T>) =>
@@ -8,10 +10,12 @@ export const withRouter =
     return (
       <BrowserRouter>
         <Cmp {...props}>
-          {/* <Routes>
-            <Route path="/" element={<ExemplePage />} />
-            <Route path="*" element={<>404 Not Found</>} />
-          </Routes> */}
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Home />} />
+            </Route>
+            <Route path="*" element={<>Page Not Found</>} />
+          </Routes>
         </Cmp>
       </BrowserRouter>
     );
