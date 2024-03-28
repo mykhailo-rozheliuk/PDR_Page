@@ -1,7 +1,5 @@
 import { Container } from '@chakra-ui/react';
 
-import cn from 'classnames';
-
 import styles from './footer.module.scss';
 
 export const Footer: React.FC = () => {

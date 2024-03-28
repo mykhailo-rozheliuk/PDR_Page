@@ -1,0 +1,298 @@
+@import '/src/styles/_index';
+
+.main {
+  flex: 1;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background: $bg-color;
+
+  &__container {
+    max-width: 1640px !important;
+    padding: 20px !important;
+  }
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 50px;
+
+  &__proposals {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    span {
+      color: $main-color;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__proposal {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: $white-color;
+  }
+
+  &__image {
+    width: 420px;
+    height: 460px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    @include home_title;
+  }
+}
+
+.categories {
+  padding-bottom: 50px;
+
+  &__items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    min-width: 13.5rem;
+    max-width: 13.5rem;
+    min-height: 9rem;
+    max-height: 9rem;
+    border: 3px solid $main-color;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 0.8rem 1rem;
+    position: relative;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__name {
+    position: absolute;
+    left: -0.5rem;
+    top: -0.8rem;
+    font-weight: 800;
+    color: $bg-color;
+    background-color: $main-color;
+
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    transition: 1000ms;
+    opacity: 1;
+  }
+
+  &__image {
+    width: 2rem;
+    position: absolute;
+    right: -0.4rem;
+    bottom: -0.4rem;
+    background-color: $main-color;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    opacity: 1;
+    transition: 1000ms;
+  }
+
+  &__info {
+    color: $white-color;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    @include home_title;
+  }
+}
+
+.demo {
+  padding-bottom: 50px;
+
+  &__content {
+    padding-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include home_title;
+  }
+}
+
+.prices {
+  padding-bottom: 50px;
+
+  &__items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: 3px solid $main-color;
+    border-radius: 1rem;
+    position: relative;
+    max-width: 25rem;
+    min-width: 25rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__sale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main-color;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    position: absolute;
+    right: -0.8rem;
+    top: -0.8rem;
+  }
+
+  &__buy {
+    background-color: $main-color;
+    width: 100%;
+    margin-bottom: 0rem;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__current {
+    position: relative;
+    font-size: 2.2rem;
+    opacity: 0.9;
+    font-weight: 700;
+
+    span {
+      width: 70px;
+      position: absolute;
+      top: 0;
+      font-size: 0.9rem;
+      font-weight: 900;
+
+      color: $bg-color;
+      margin-left: 0.3rem;
+    }
+  }
+
+  &__button {
+    background-color: $main-color;
+    border: none;
+    padding: 0.65rem 0.5rem;
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 900;
+    margin: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    width: 88%;
+    color: $bg-color;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 0.9rem $main-color !important;
+    }
+  }
+
+  &__title {
+    @include home_title;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+
+  &__text {
+    padding-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: $white-color;
+    max-width: 22rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-bottom: 20px;
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+
+    p {
+      font-size: 0.9rem;
+      color: $white-color;
+      min-width: 160px;
+      max-width: 160px;
+    }
+  }
+
+  &__icon {
+    color: $main-color !important;
+    font-size: 24px !important;
+  }
+}
+
+.partners {
+  padding-bottom: 50px;
+
+  &__wrap {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include home_title;
+  }
+}
+
+.about {
+  &__title {
+    @include home_title;
+
+    padding-bottom: 20px;
+  }
+}
+
+.text {
+  color: $white-color;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-bottom: 30px;
+}
