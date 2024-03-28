@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { Home } from 'pages';
+import { Home, Main } from 'pages';
 
 import { Layout } from 'shared/ui';
 
@@ -14,6 +14,7 @@ export const withRouter =
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
             </Route>
+            <Route path="/main" element={<Main />} />
             <Route path="*" element={<>Page Not Found</>} />
           </Routes>
         </Cmp>
