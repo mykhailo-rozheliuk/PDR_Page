@@ -1,0 +1,49 @@
+@import '/src/styles/_index';
+
+.section {
+  background: $bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  min-height: 100vh;
+
+  .error {
+    font-size: 200px;
+    color: $main-color;
+    text-shadow:
+      1px 1px 1px #a4d913,
+      2px 2px 1px #a4d913,
+      3px 3px 1px #a4d913,
+      4px 4px 1px #a4d913,
+      5px 5px 1px #a4d913,
+      6px 6px 1px #a4d913,
+      7px 7px 1px #a4d913,
+      8px 8px 1px #a4d913,
+      25px 25px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.page {
+  margin: 2rem 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: $main-color;
+}
+
+.back_home {
+  display: inline-block;
+  border: 2px solid$main-color;
+  color: $main-color;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.75rem 1rem 0.6rem;
+  transition: all 0.2s linear;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background: #a4d913;
+    color: #ddd;
+  }
+}
