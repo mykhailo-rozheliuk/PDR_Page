@@ -2,24 +2,22 @@
 
 .main {
   margin: 0 20px;
+
+  &__title {
+    font-size: 1.8rem;
+    color: $text-color;
+    padding-bottom: 50px;
+  }
 }
 
 .tests {
-  &__title {
-    font-size: 1.8rem;
-    color: $white-color;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__descr,
-  &__choseCategory {
-    color: $white-color;
+  &__descr {
+    color: $text-color;
     max-width: 690px;
     display: flex;
     justify-content: center;
@@ -28,31 +26,52 @@
     font-weight: 700;
   }
 
-  &__categoryList {
-    width: 450px;
+  &__list {
+    width: 500px;
     max-width: 100%;
   }
 
-  &__categoryItem {
+  &__item {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+
     text-decoration: none;
     background-color: $main-color;
     color: $bg-color;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    padding-top: 8px;
-    padding-bottom: 8px;
+
+    border-radius: 1rem;
+    padding: 10px;
+
     width: 100%;
     box-shadow: 0.1rem 0.2rem 0.2rem $main-color;
     transition: 200ms;
-    cursor: pointer;
     margin-bottom: 0.9rem;
+    cursor: pointer;
+
     &:hover {
       transform: scale(0.95);
     }
+
+    span {
+      width: 10%;
+      font-size: 32px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__wrap {
+    width: 90%;
+    display: grid;
+    justify-items: center;
   }
 }

@@ -3,3 +3,4 @@ export { Header } from './Header';
 export { Footer } from './Footer';
 export { Sidebar } from './Sidebar';
 export { Headling } from './Headling';
+export { Spinner } from './Spinner';

@@ -6,6 +6,17 @@ import styles from './sidebar.module.scss';
 
 import cn from 'classnames';
 
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure
+} from '@chakra-ui/react';
+
 import Profile from 'assets/profile.png';
 
 import { FaRoad } from 'react-icons/fa';
@@ -24,6 +35,13 @@ export const Sidebar: React.FC = () => {
   const handleCloseMenu = () => {
     setCloseMenu(!closeMenu);
   };
+
+  const Overlay = () => (
+    <ModalOverlay bg="none" backdropFilter="auto" backdropInvert="80%" backdropBlur="2px" />
+  );
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [overlay, setOverlay] = useState(<Overlay />);
 
   return (
     <div className={cn(styles.sidebar, { [styles.active]: closeMenu })}>
@@ -126,17 +144,34 @@ export const Sidebar: React.FC = () => {
           <span className={styles.contents__text}>support</span>
         </NavLink>
 
-        <NavLink
-          to="/support"
-          className={cn(styles.contents__item, {
-            [styles.active]: location.pathname === '/support'
-          })}
+        <div
+          className={styles.contents__item}
+          onClick={() => {
+            setOverlay(<Overlay />);
+            onOpen();
+          }}
         >
           <div className={styles.contents__logo}>
             <IoMdExit />
           </div>
+
           <span className={styles.contents__text}>вихід</span>
-        </NavLink>
+        </div>
+
+        <Modal isCentered isOpen={isOpen} onClose={onClose}>
+          {overlay}
+          <ModalContent className={styles.modal}>
+            <ModalHeader className={styles.modal__header}>Вийти</ModalHeader>
+
+            <ModalBody className={styles.modal__body}>Ви дійсно хочете вийти</ModalBody>
+            <ModalFooter className={styles.modal__footer}>
+              <Button className={styles.modal__button} onClick={onClose}>
+                Відміна
+              </Button>
+              <Button className={cn(styles.modal__button, styles.modal__button_red)}>Вийти</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
       </div>
     </div>
   );

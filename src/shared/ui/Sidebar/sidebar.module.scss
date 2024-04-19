@@ -1,7 +1,7 @@
 @import '/src/styles/_index';
 
 .sidebar {
-  background-color: #171717;
+  background-color: $bg-sidebar;
   position: absolute;
   top: 0;
   left: 0;
@@ -55,7 +55,7 @@
 
   &__text {
     text-decoration: none;
-    color: #ffffff;
+    color: $text-color;
     font-weight: 600;
     font-size: 20px;
     display: flex;
@@ -176,7 +176,7 @@
     padding: 0;
     margin: 0;
     font-size: 16.7px;
-    color: #ffff;
+    color: $text-color;
     text-transform: capitalize;
     font-weight: 800;
   }
@@ -185,7 +185,7 @@
     padding: 0;
     margin: 0;
     font-size: 13.9px;
-    color: #ffff;
+    color: $text-color;
     text-transform: lowercase;
   }
 }
@@ -228,6 +228,49 @@
   .contents {
     &__text {
       opacity: 0;
+    }
+  }
+}
+
+.modal {
+  width: 400px !important;
+  border-radius: 10px !important;
+  background-color: #171717 !important;
+
+  &__header {
+    color: $white-color;
+    font-weight: 700 !important;
+    font-size: 1.75rem !important;
+  }
+
+  &__body {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $white-color;
+    letter-spacing: 0.05rem;
+  }
+
+  &__footer {
+    display: flex;
+    gap: 20px !important;
+  }
+
+  &__button {
+    background-color: #2b2525 !important;
+    border-radius: 15px !important;
+    color: $white-color !important;
+    font-weight: 600 !important;
+
+    &:hover {
+      background-color: #382e2e !important;
+    }
+
+    &_red {
+      background-color: #f13e26 !important;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #c13320 !important;
+      }
     }
   }
 }
