@@ -98,7 +98,7 @@ export const Profile: React.FC = () => {
                 14
                 <div className={styles.info__descrp}>Невірних відповідей</div>
               </div>
-              <div className={cn(styles.info__item, styles.info__item_green)}>
+              <div className={cn(styles.info__item, styles.info__item_blue)}>
                 16
                 <div className={styles.info__descrp}>Правильних відповідей</div>
               </div>

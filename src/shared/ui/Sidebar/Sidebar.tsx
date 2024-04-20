@@ -24,6 +24,7 @@ import { FaHome } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa6';
 import { IoMdExit } from 'react-icons/io';
 import { MdPeopleAlt } from 'react-icons/md';
+import { MdOutlineIntegrationInstructions } from 'react-icons/md';
 
 import { HiSpeakerphone } from 'react-icons/hi';
 import { PiCurrencyDollarSimpleFill } from 'react-icons/pi';
@@ -106,7 +107,7 @@ export const Sidebar: React.FC = () => {
           <div className={styles.contents__logo}>
             <HiSpeakerphone />
           </div>
-          <span className={styles.contents__text}>Новини</span>
+          <span className={styles.contents__text}>Теорія ПДР</span>
         </NavLink>
 
         <NavLink
@@ -140,9 +141,21 @@ export const Sidebar: React.FC = () => {
           })}
         >
           <div className={styles.contents__logo}>
+            <MdOutlineIntegrationInstructions />
+          </div>
+          <span className={styles.contents__text}>Інструкції</span>
+        </NavLink>
+
+        <NavLink
+          to="/support"
+          className={cn(styles.contents__item, {
+            [styles.active]: location.pathname === '/support'
+          })}
+        >
+          <div className={styles.contents__logo}>
             <MdPeopleAlt />
           </div>
-          <span className={styles.contents__text}>support</span>
+          <span className={styles.contents__text}>Підтримка</span>
         </NavLink>
 
         <div

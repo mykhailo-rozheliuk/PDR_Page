@@ -22,7 +22,7 @@
   }
 
   &__button {
-    background-color: #171717 !important;
+    background-color: $bg-color !important;
     color: $white-color !important;
     font-size: 1.2rem !important;
     font-weight: 800;
@@ -47,7 +47,7 @@
   border-radius: 1rem;
   border: 0;
   box-shadow: 5px 5px 10px #000000;
-  background-color: #171717;
+  background-color: $bg-color;
 
   display: flex !important;
 
