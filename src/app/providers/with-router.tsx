@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { Auth, Home, Main, PageNotFound } from 'pages';
+import { Auth, Home, Main, PageNotFound, Theory } from 'pages';
 
 import { Layout } from 'shared/ui';
 import { PageLayout } from 'shared/ui/Layout/PageLayout';
@@ -22,6 +22,7 @@ export const withRouter =
               <Route path="/main" element={<Main />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/tariffs" element={<Tariffs />} />
+              <Route path="/theory" element={<Theory />} />
             </Route>
 
             <Route path="/auth" element={<Auth />} />
