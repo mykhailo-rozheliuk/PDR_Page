@@ -15,7 +15,6 @@ import {
 
 import React, { useState } from 'react';
 import { FaCar } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 export const StatisticModal: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -40,8 +39,7 @@ export const StatisticModal: React.FC = () => {
 
   return (
     <div>
-      <Link
-        to="#"
+      <div
         onClick={() => {
           setOverlayStatistic(<OverlayStatistic />);
           onOpen();
@@ -55,7 +53,7 @@ export const StatisticModal: React.FC = () => {
           <h4 className={styles.item__title}>Категорія:</h4>
           <div className={styles.item__text}>B</div>
         </div>
-      </Link>
+      </div>
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered size={'xl'}>
         {overlayStatistic}

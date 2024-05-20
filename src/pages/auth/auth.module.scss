@@ -2,7 +2,7 @@
 
 .auth {
   padding-bottom: 50px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: $bg-color;
 
   display: flex !important;
@@ -31,8 +31,9 @@
     box-shadow: none !important;
 
     border-radius: 3rem;
+    border: 1px solid #36353f !important;
     padding: 1rem 3rem;
-    box-shadow: 3px 3px 10px $bg-color;
+
     transition: all 0.5s;
   }
 
@@ -42,16 +43,26 @@
 }
 
 .content {
-  width: 410px !important;
+  display: flex !important;
+
+  max-width: 410px !important;
   overflow: hidden;
   border-radius: 1rem;
   border: 0;
   box-shadow: 5px 5px 10px #000000;
   background-color: $bg-color;
 
-  display: flex !important;
-
   padding: 1rem 3rem;
+
+  @media (max-width: 768.98px) {
+    max-width: 380px !important;
+    padding: 0.7rem 2rem;
+  }
+
+  @media (max-width: 468.98px) {
+    max-width: 340px !important;
+    padding: 0.5rem 1.6rem;
+  }
 
   &__wrap {
     width: 100%;
@@ -95,12 +106,15 @@
   }
 
   &__filed {
+    border-bottom: 2px solid #a1a1a1;
+    padding: 6px 0;
+    position: relative;
+  }
+
+  &__filedWrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #a1a1a1;
-    padding: 10px 0;
-    position: relative;
   }
 
   &__input {
@@ -166,4 +180,20 @@
 
 [data-selected] {
   border-color: none !important;
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.inputError {
+  border: 2px solid red;
+}
+
+.successMessage {
+  color: #a2d419;
+  font-size: 20px;
+  font-weight: 600;
 }

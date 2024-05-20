@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { GiReturnArrow } from 'react-icons/gi';
 
 export const ResetModal: React.FC = () => {
@@ -26,8 +26,7 @@ export const ResetModal: React.FC = () => {
 
   return (
     <div>
-      <Link
-        to="#"
+      <div
         onClick={() => {
           setOverlayReset(<OverlayReset />);
           onOpen();
@@ -41,7 +40,7 @@ export const ResetModal: React.FC = () => {
           <h4 className={styles.item__title}>Скинути статистику</h4>
           <div className={styles.item__text}>Повернути все як було раніше</div>
         </div>
-      </Link>
+      </div>
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered size={'xl'}>
         {overlayReset}

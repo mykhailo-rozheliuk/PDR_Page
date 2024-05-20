@@ -39,9 +39,7 @@ export const Profile: React.FC = () => {
             <div className={styles.item__descr}>
               <h4 className={styles.item__title}>Моя Група:</h4>
               <div className={styles.item__text}>
-                <Link to="#" className={styles.item__link}>
-                  Доступно в Преміум версії
-                </Link>
+                <div className={styles.item__link}>Доступно в Преміум версії</div>
               </div>
             </div>
           </Link>

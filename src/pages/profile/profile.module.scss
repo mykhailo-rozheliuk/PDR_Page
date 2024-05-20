@@ -243,9 +243,29 @@ span {
   background-color: $bg-sidebar !important;
 
   &__header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__headerText {
     font-size: 25px !important;
     color: $white-color;
+
+    flex: 1;
+    text-align: center;
+  }
+
+  &__headerBtn {
+    color: $white-color;
+    font-size: 32px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      color: #a2d419;
+    }
   }
 
   &__body {

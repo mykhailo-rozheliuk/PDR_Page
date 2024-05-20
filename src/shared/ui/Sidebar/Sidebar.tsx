@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import styles from './sidebar.module.scss';
 
@@ -31,6 +31,8 @@ import { PiCurrencyDollarSimpleFill } from 'react-icons/pi';
 
 export const Sidebar: React.FC = () => {
   const location = useLocation();
+
+  const navigate = useNavigate();
 
   const [closeMenu, setCloseMenu] = useState(false);
 
@@ -180,7 +182,12 @@ export const Sidebar: React.FC = () => {
               <Button className={styles.modal__button} onClick={onClose}>
                 Відміна
               </Button>
-              <Button className={cn(styles.modal__button, styles.modal__button_red)}>Вийти</Button>
+              <Button
+                className={cn(styles.modal__button, styles.modal__button_red)}
+                onClick={() => navigate('/auth')}
+              >
+                Вийти
+              </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>

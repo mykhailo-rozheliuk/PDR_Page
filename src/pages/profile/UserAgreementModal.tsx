@@ -1,5 +1,3 @@
-import styles from './profile.module.scss';
-
 import cn from 'classnames';
 
 import {
@@ -11,22 +9,21 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FaClipboardList } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
+
+import styles from './profile.module.scss';
 
 export const UserAgreementModal: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = useState('inside');
 
   return (
     <div>
-      <Link
-        to="#"
+      <div
+        className={cn(styles.content__item, styles.item)}
         onClick={() => {
           onOpen();
         }}
-        className={cn(styles.content__item, styles.item)}
       >
         <span>
           <FaClipboardList />
@@ -35,18 +32,15 @@ export const UserAgreementModal: React.FC = () => {
           <h4 className={styles.item__title}>Користувацька угода</h4>
           <div className={styles.item__text}>Сторінка з користувацькою угодою</div>
         </div>
-      </Link>
+      </div>
 
-      <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-        scrollBehavior={scrollBehavior}
-        isCentered
-        size={'full'}
-      >
+      <Modal isOpen={isOpen} onClose={onClose} scrollBehavior="inside" isCentered size={'full'}>
         <ModalOverlay bg="none" backdropFilter="auto" backdropBlur="3px" />
         <ModalContent className={styles.modal}>
-          <ModalHeader className={styles.modal__header}>Користувацька угода</ModalHeader>
+          <ModalHeader className={styles.modal__header}>
+            <div className={styles.modal__headerText}>Користувацька угода</div>
+            <IoClose onClick={onClose} className={styles.modal__headerBtn} />
+          </ModalHeader>
           <ModalBody className={styles.modal__body}>
             <div className={styles.modal__agreement}>
               <h2>ПРАВИЛА КОРИСТУВАННЯ ТА УГОДА КОРИСТУВАЧА</h2>
