@@ -28,9 +28,9 @@ export const Auth: React.FC = () => {
     try {
       await signInWithGoogle();
       const user = {
-        displayName: localStorage.getItem('name') || 'Anonymous',
-        email: localStorage.getItem('email') || 'example@example.com',
-        photoURL: localStorage.getItem('profilePic') || ''
+        displayName: sessionStorage.getItem('name') || 'Anonymous',
+        email: sessionStorage.getItem('email') || 'example@example.com',
+        photoURL: sessionStorage.getItem('profilePic') || ''
       };
       console.log('Logged in user:', user);
 

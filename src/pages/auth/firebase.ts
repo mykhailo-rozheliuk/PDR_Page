@@ -39,9 +39,9 @@ export const signInWithGoogle = () => {
       const userEmail = email ?? 'example@example.com';
       const profilePic = photoURL ?? '';
 
-      localStorage.setItem('name', name);
-      localStorage.setItem('email', userEmail);
-      localStorage.setItem('profilePic', profilePic);
+      sessionStorage.setItem('name', name);
+      sessionStorage.setItem('email', userEmail);
+      sessionStorage.setItem('profilePic', profilePic);
     })
 
     .catch((error) => {
