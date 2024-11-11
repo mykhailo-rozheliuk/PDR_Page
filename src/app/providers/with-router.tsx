@@ -9,6 +9,7 @@ import Tariffs from 'pages/tariffs';
 import Instructions from 'pages/instructions';
 import PrivateRoute from 'shared/ui/PrivateRoute';
 import { AuthProvider } from 'pages/auth/AuthContext';
+import Themes from 'pages/themes';
 
 type WithRouterProps = {
   children?: React.ReactNode;
@@ -26,15 +27,14 @@ export const withRouter =
                 <Route path="/" element={<Home />} />
               </Route>
 
-              <Route element={<PrivateRoute />}>
-                <Route element={<PageLayout />}>
-                  <Route path="/main" element={<Main />} />
-                  <Route path="/theory" element={<Theory />} />
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="/tariffs" element={<Tariffs />} />
-                  <Route path="/instructions" element={<Instructions />} />
-                  <Route path="/support" element={<Support />} />
-                </Route>
+              <Route element={<PageLayout />}>
+                <Route path="/main" element={<Main />} />
+                <Route path="/theory" element={<Theory />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/tariffs" element={<Tariffs />} />
+                <Route path="/instructions" element={<Instructions />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/main/themes" element={<Themes />} />
               </Route>
 
               <Route path="/auth" element={<Auth />} />

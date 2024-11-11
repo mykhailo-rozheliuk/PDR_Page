@@ -15,14 +15,7 @@
     },
     "countQuestions": 37
   },
-  {
-    "id": 30,
-    "name": {
-      "uk": "НОМЕРНІ, РОЗПІЗНАВАЛЬНІ ЗНАКИ, НАПИСИ І ПОЗНАЧЕННЯ",
-      "en": "NUMBERS, IDENTIFICATIONS, INSCRIPTIONS AND SYMBOLS"
-    },
-    "countQuestions": 13
-  },
+
   {
     "id": 3,
     "name": {
@@ -238,6 +231,14 @@
       "en": "INTERNATIONAL MOVEMENT"
     },
     "countQuestions": 1
+  },
+  {
+    "id": 30,
+    "name": {
+      "uk": "НОМЕРНІ, РОЗПІЗНАВАЛЬНІ ЗНАКИ, НАПИСИ І ПОЗНАЧЕННЯ",
+      "en": "NUMBERS, IDENTIFICATIONS, INSCRIPTIONS AND SYMBOLS"
+    },
+    "countQuestions": 13
   },
   {
     "id": 31,
